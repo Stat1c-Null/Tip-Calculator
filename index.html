@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h1>Tip Calculator</h1>
+        <div id="calculator">
+            <p>Bill Amount</p>
+            <input type="number" class="inputs" id="billAmount" placeholder="Price in Dollars">
+            <p>Quality of Service</p>
+            <!--DROP DOWN MENU-->
+            <select class="inputs" name="service" id="serviceQuality">
+                <option disabled selected value="0">~~Choose an Option~~</option>
+                <option value="0.5">50% - Excellent</option>
+                <option value="0.4">40% - Outstanding</option>
+                <option value="0.3">30% - Very Good</option>
+                <option value="0.25">25% - Pretty Good</option>
+                <option value="0.2">20% - Good</option>
+                <option value="0.15">15% - It was okay</option>
+                <option value="0.1">10% - Pretty Bad</option>
+                <option value="0.05">5% - Absolutely Horrible</option>
+            </select>
+            <!--NUMBER OF PEOPLE-->
+            <p>Number of guests</p>
+            <input type="number" class="inputs" id="people" placeholder="Number of People">
+            <p>Calculate your generosity</p>
+            <button id="calculateButton">Calculate</button>
+            <!--CALCULATED OUTPUT-->
+            <div id="totalTip">
+                <p>Total Tip</p>
+                <p><span class="dollarsign">$</span><span id="tip">0.00</span> each</p>
+                <p>Personal Bill + Tip</p>
+                <p><span class="dollarsign">$</span><span id="bill">0.00</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
